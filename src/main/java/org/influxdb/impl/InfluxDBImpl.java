@@ -84,7 +84,7 @@ public class InfluxDBImpl implements InfluxDB {
     Moshi moshi = new Moshi.Builder().build();
     this.hostAddress = parseHostAddress(url);
     this.username = username;
-    this.password = password;ANY
+    this.password = password;
     this.loggingInterceptor = new HttpLoggingInterceptor();
     this.loggingInterceptor.setLevel(Level.NONE);
     this.gzipRequestInterceptor = new GzipRequestInterceptor();
