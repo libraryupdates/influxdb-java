@@ -106,7 +106,7 @@ public class BatchPoints {
     }
 
     /**
-     * Set the ConsistencyLevel to use. If not given it defaults to {@link ConsistencyLevel#ONE}
+     * Set the ConsistencyLevel to use. If not given it defaults to {@link ConsistencyLevel#ANY}
      *
      * @param consistencyLevel the ConsistencyLevel
      * @return the Builder instance
@@ -132,7 +132,7 @@ public class BatchPoints {
       batchPoints.setRetentionPolicy(this.retentionPolicy);
       batchPoints.setTags(this.tags);
       if (null == this.consistency) {
-        this.consistency = ConsistencyLevel.ONE;
+        this.consistency = ConsistencyLevel.ANY;
       }
       batchPoints.setConsistency(this.consistency);
       return batchPoints;
